@@ -34,6 +34,73 @@ else:
     i = i + 2
   print(sum) #14850, too high 
 
+#trying a more simple step:
+#this one works 
+def all(a, b):
+  sum = 0
+  for num in range(a, b+1, 1):
+    sum = sum+num
+  print(sum)
+
+#trying dataset
+all(100,200) #15,150 does not match originial
+
+# this function is wrong because the range only goes to b and not b+1
+def odds(a, b):
+  a = int(a)
+  b = int(b)
+  sum = 0
+
+  if a % 2 == 1:
+    for num in range(a, b, 2):
+      sum = sum+num
+    print(sum)
+  else:
+    for num in range(a+1, b, 2):
+      sum = sum+num
+    print(sum)
+
+
+#trying a differnt method
+#this loop works but it has to check every number in the range. 
+def odds2(a,b):
+  sum = 0
+  for num in range(a, b+1):
+    if num % 2 ==1:
+      sum = sum+num
+  print(sum)
+
+
+######solution######
+
+#this wone matches odds2 and works but it only has to check the first number
+#and then every other number after. 
+def oddsplus(a, b):
+  a = int(a)
+  b = int(b)
+  sum = 0
+
+  if a % 2 == 1:
+    for num in range(a, b+1, 2):
+      sum = sum+num
+    print(sum)
+  else:
+    for num in range(a+1, b+1, 2):
+      sum = sum+num
+    print(sum)
+
+odds(100, 200) #7500, this is correct! 
+oddsplus(4809, 9479)
+odds2(4809, 9479)#correct! 
+
+
+
+
+
+
+
+
+
   
 
 

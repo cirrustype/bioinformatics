@@ -40,3 +40,16 @@
 #Given: A file containing at most 1000 lines.
 
 #Return: A file containing all the even-numbered lines from the original file. Assume 1-based numbering of lines.
+
+###example data
+
+e = open('ini5example.txt', 'r') # everything has to be in single quotes
+
+#print(e.read())
+
+elines = e.readlines()
+elist = list(elines)
+print(len(elist))
+
+for i in range(1, len(elist), 2):
+  print(elist[i]) #finally 

@@ -47,9 +47,19 @@ e = open('ini5example.txt', 'r') # everything has to be in single quotes
 
 #print(e.read())
 
-elines = e.readlines()
-elist = list(elines)
-print(len(elist))
+def ini5(a, m, b, n):
+  e = open(a, m)
+  elines = e.readlines()
+  elist = list(elines)
+  out =open(b, n)
+  for i in range(1, len(elist), 2):
+    print(elist[i]) #finally 
+    #lines = [elist[i]]
+    #print(lines)
+    out.write(elist[i])
 
-for i in range(1, len(elist), 2):
-  print(elist[i]) #finally 
+ini5('ini5example.txt', 'r', 'inifoutputtest.txt', 'w') #this works
+
+###### Solution ######
+
+ini5('ini5.txt', 'r', 'ini5output.txt', 'w') #correct! 

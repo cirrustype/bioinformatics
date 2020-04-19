@@ -14,8 +14,8 @@
 d = open('ini6example.txt', 'r')
 s = d.read()
 w = s.split(' ')
-print(s)
-print(w)
+#print(s)
+#print(w)
 
 dict = {}
 for i in w:
@@ -23,7 +23,7 @@ for i in w:
     dict[i] = dict[i] + 1
   else:
     dict[i] = 1
-print(dict)
+#print(dict)
 #works on first try, awesome. 
 
 ###### Solution ######
@@ -31,18 +31,51 @@ def ini6(a, m, b):
   inPut = open(a, m)
   out = open(b, 'w')
   read = inPut.read()
-  words = read.split(' ')
-  print(read)
-  print(words)
+  r = read.strip('\n')
+  words = r.split(' ')
+  #print(read)
+  #print(words)
   dictionary = {}
   for i in words:
     if i in dictionary:
       dictionary[i] = dictionary[i] + 1 
     else:
       dictionary[i] = 1
-  print(dictionary)
-  out.write(str(dictionary))
+  #print(dictionary)
+  d = str(dictionary)
+  s3 = d.split(',') # d = s2
+  for i in s3:
+    i1 = s3[i]
+    i2 = str(i1)
+    kill = "{}:'"
+    for char in kill: 
+      i2 = i2.replace(char, "")
+    s3[i] = i2
+    #print(i2)
+  print(s3)
   
-  #TODO: I need to rework the dictionary so that the output is separated by lines and does not have the quotes and colons. Maybe a function in place of str(dictionary) that writes out a new string?
+  #TODO: I need to refactor the loops to get rid of the inner one so that the unwanted characters are removed all at once. Then split on the commas and write each entry in the list onto a new line of the output file. 
+
+  out.write(d)
+  # look up re library and re.sub???
+  #https://stackoverflow.com/questions/3939361/remove-specific-characters-from-a-string-in-python
+
+  #### building blocks of the loop, left for reference ####
+  #s1 = d.strip('{') #good
+  #s2 = s1.strip('}')
+  #i3 = i2.replace(":", "") #good
+  #i4 = i3.replace("'", "")
+  #i3 = i2.strip(':')
+  #print(i4)
+  #print(s3)
+
+
+
+
+
+  
 
 ini6('ini6.txt', 'r', 'ini6out.txt') #need to use a .strip() somewhere
+
+
+

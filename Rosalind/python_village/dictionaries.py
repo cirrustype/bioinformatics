@@ -43,21 +43,32 @@ def ini6(a, m, b):
       dictionary[i] = 1
   #print(dictionary)
   d = str(dictionary)
-  s3 = d.split(',') # d = s2
-  for i in s3:
+  s3 = d.split(',')
+  listlen = len(s3) # needed to add range so that the index was an integer?
+  for i in range(listlen):
     i1 = s3[i]
     i2 = str(i1)
-    kill = "{}:'"
+    kill = "{}:',"
     for char in kill: 
       i2 = i2.replace(char, "")
     s3[i] = i2
-    #print(i2)
-  print(s3)
-  
-  #TODO: I need to refactor the loops to get rid of the inner one so that the unwanted characters are removed all at once. Then split on the commas and write each entry in the list onto a new line of the output file. 
 
-  out.write(d)
-  # look up re library and re.sub???
+  sol = "\n".join(s3) #this works
+  
+  print(sol)
+
+  out.write(sol)
+
+
+ini6('ini6.txt', 'r', 'ini6out.txt')
+
+#TODO clean this up a lot. 
+
+#look up python Counter do do this in only two lines
+
+
+
+# look up re library and re.sub???
   #https://stackoverflow.com/questions/3939361/remove-specific-characters-from-a-string-in-python
 
   #### building blocks of the loop, left for reference ####
@@ -73,9 +84,29 @@ def ini6(a, m, b):
 
 
 
-  
 
-ini6('ini6.txt', 'r', 'ini6out.txt') #need to use a .strip() somewhere
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

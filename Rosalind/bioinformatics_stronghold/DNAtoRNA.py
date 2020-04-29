@@ -81,6 +81,7 @@ with open('rosalind_rna.txt') as file:
 #print(sRNA)
   
 #TODO make a dictionary for the DNA to RNA bases
+#TODO remake everything because this was somehow not saved! 
 ###### Function ######
 
 

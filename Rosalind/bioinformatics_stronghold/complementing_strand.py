@@ -33,6 +33,24 @@ inputDNA = 'AAAACCCGGT'
 reverseDNA = inputDNA[::-1]
 print(reverseDNA)
 
+#I dont think a for loop to use replace would work because you would accdentally switch back the complement from the previous iterations
+
+listDNA = list(reverseDNA)
+print(listDNA)
+
+listcomp = ()
+for char in listDNA:
+  if listDNA[char] == 'A':
+    listcomp.append('T')
+  elif listDNA[char] == 'T':
+    listcomp.append('A')
+  elif listDNA[char] == 'C':
+    listcomp.append('G')
+  else listDNA[char] == 'G':
+    listcomp.append('C')
+
+  
+
 
 
 

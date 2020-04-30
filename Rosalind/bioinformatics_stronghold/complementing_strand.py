@@ -86,7 +86,11 @@ reverse('CAACCACGAATCGCTCCAAACATCAAGACCATCCGCTGGTGATTAGGCCCGTTAGTCAGTGTCGCTCTATA
 ###### Solution ######
 
 
-
+###### Other solutions ######
+#from Ben Usman, a lot easier 
+st = "AAAACCCGGT"
+st = st.replace('A', 't').replace('T', 'a').replace('C', 'g').replace('G', 'c').upper()[::-1]
+print(st)
 
 
 #for char in listDNA:

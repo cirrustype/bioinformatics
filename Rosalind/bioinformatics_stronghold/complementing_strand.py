@@ -31,23 +31,73 @@
 inputDNA = 'AAAACCCGGT'
 
 reverseDNA = inputDNA[::-1]
-print(reverseDNA)
+#print(reverseDNA)
 
 #I dont think a for loop to use replace would work because you would accdentally switch back the complement from the previous iterations
 
 listDNA = list(reverseDNA)
-print(listDNA)
+#print(listDNA)
 
-listcomp = ()
+listcomp = []
 for char in listDNA:
-  if listDNA[char] == 'A':
+  if char == 'A':
     listcomp.append('T')
-  elif listDNA[char] == 'T':
+  elif char == 'T':
     listcomp.append('A')
-  elif listDNA[char] == 'C':
+  elif char == 'C':
     listcomp.append('G')
-  else listDNA[char] == 'G':
+  elif char == 'G':
     listcomp.append('C')
+
+strcomp = str(listcomp)
+#strcomp1 = strcomp.split(',')
+kill = "[]',"
+for char in kill:
+  strcomp = strcomp.replace(char, "")
+sol = strcomp.replace(' ', '')
+#print(sol) #correct 
+
+###### Function ######
+def reverse(a):
+  reverseDNA = a[::-1]
+  listDNA = list(reverseDNA)
+
+  listcomp = []
+  for char in listDNA:
+    if char == 'A':
+      listcomp.append('T')
+    elif char == 'T':
+      listcomp.append('A')
+    elif char == 'C':
+      listcomp.append('G')
+    elif char == 'G':
+      listcomp.append('C')
+
+  strcomp = str(listcomp)
+  kill = "[]',"
+  for char in kill:
+    strcomp = strcomp.replace(char, "")
+  sol = strcomp.replace(' ', '')
+  print(sol) #correct 
+
+reverse('CAACCACGAATCGCTCCAAACATCAAGACCATCCGCTGGTGATTAGGCCCGTTAGTCAGTGTCGCTCTATAAGCGGCCATTGAGTATGACATAGGCGTACAATATGCAAGGGACTGTCACTTCCCTGCCCGAAATCTACCAAATTTGTAAACTTCTGAATCAATATCGTCAATTTGCGACACCACCTAAGTCTACTAAGCGGCAGCTTCTATGCTTTGCATCTCGCTCCAGTTTCTATGGACCAGATGGAGAATGTAAGCATAGTGCAACGCAATTGTCGCGTTGCGACCGGCCTCCCAACGACGATGGCGTGCACCCATGACCTGCCCCGCGGTTGGCGAGCGCCCGCTTGAGTGGGGCGTCATGGGATAGATCGTCTACTTGCGTGTCAGGCGCTTGAACGACTCTCCTTATAACCAAGATCGTCGGTCCGAACGACCAAGATGCCACCCTTAGTAATGTAAAATTCGCCACGTTGTCCTGAAGCAGAATTATTCGAGTTAGCGACTGGCTTGAAAGGAGTACGCTACATAAGCAACGGCACATTACTGCCCTGGCTTCCGCTCAGCCTCAGATCTTTGGCACTATCAGGAGTGCAGCGAGGGGACTTCCCAGACATTTCCTAACTGGAGAAAGCTATTACATTCAAGACATGTAGCTAGTCACATATAAATTAACGACATTTTTCTCAACGCTACCGGTTGAAGACTCTCTTAAGGTAGCTACGCCATAGTCTCGCCTAGTGAGAATAATCCCGCGAGACTGGACGATCTTTGCACGCCGGGGCTTCAGATGGCGTCCAACCGCTCTTAAGCG') #correct 
+
+
+###### Solution ######
+
+
+
+
+
+#for char in listDNA:
+  #if listDNA[char] == 'A':
+    #listcomp.append('T')
+  #elif listDNA[char] == 'T':
+   #listcomp.append('A')
+ # elif listDNA[char] == 'C':
+    #listcomp.append('G')
+  #elif listDNA[char] == 'G':
+    #listcomp.append('C')
 
   
 

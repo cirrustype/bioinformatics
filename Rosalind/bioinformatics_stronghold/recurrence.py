@@ -36,31 +36,57 @@ F2 = 1
 # f(i) = f(i-1) + k*f(i-2)
 # f.append(f(i)))
 
+#print(list(range(n+1)))
+#n=5
+#k=3
+#for number in list(range(n+1)):
+  #f = 1
+  #f = f + k*number
+  #print(f)
 
-n=5
-k=3
-for number in list(range(n+1)):
-  f = 1
-  f = f + k*number
-  print(f)
-
-
+pairs = [1,1]
+#print(pairs[2-1])
+n=5 #number of cycles
+k=3 #pairs per cycle per existing pair 
+for i in range(3, n+1): #new pairs born on the thrid week, n+1 because list starts at 0 in python; 'range(3,5)'
+  f = pairs[i-2] + k*pairs[i-3] #[i-2]=[1] and [i=3]=[0] on the first step just to adjust fopr the index starting at 0
+  pairs.append(f) # adds the value for the pairs of rabits at step n to the pairs vector. 
+print(pairs[n-1]) #pairs[n] would be out of bounds because the index goes from 0-4 not 1-5
 
 
 ###### FUnction ######
+def FIB(n, k):
+  pairs = [1,1]
+  for i in range(3, n+1):
+    f = pairs[i-2] + k*pairs[i-3]
+    pairs.append(f)
+  print(pairs[n-1])
 
-
+FIB(5,3) #correct 
 
 ###### Solution ######
 
-
+FIB(31,2) #correct
 
 ###### Other solutions ######
+# look at closed form solutions
 
+#from toovst:
+from math import sqrt
 
+def fib_rabbits(n, k):
+    d = (-1)**2 - 4 * 1 * (-k)
+    f_n = (1/sqrt(d))*((1+sqrt(d))/2)**n - (1/sqrt(d))*((1-sqrt(d))/2)**n
+    return int(f_n)
 
+print(fib_rabbits(5, 3))
 
-
+#by Kit Burschka:
+def fib(n, k):
+    a, b = 1, 1
+    for i in range(2, n):
+        a, b = b, k*a + b
+    return b
 
 
 

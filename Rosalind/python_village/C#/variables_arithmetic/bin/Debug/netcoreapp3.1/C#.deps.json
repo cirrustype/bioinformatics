@@ -6,15 +6,15 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v3.1": {
-      "variables&arithmetic/1.0.0": {
+      "C#/1.0.0": {
         "runtime": {
-          "variables&arithmetic.dll": {}
+          "C#.dll": {}
         }
       }
     }
   },
   "libraries": {
-    "variables&arithmetic/1.0.0": {
+    "C#/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

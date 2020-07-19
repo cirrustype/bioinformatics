@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Hal\\Desktop\\bioinformatics\\Rosalind\\python_village\\C#\\variables&arithmetic\\variables&arithmetic.csproj",
-      "projectName": "variables&arithmetic",
-      "projectPath": "C:\\Users\\Hal\\Desktop\\bioinformatics\\Rosalind\\python_village\\C#\\variables&arithmetic\\variables&arithmetic.csproj",
+      "projectUniqueName": "C:\\Users\\Hal\\Desktop\\bioinformatics\\Rosalind\\python_village\\C#\\variables_arithmetic\\C#.csproj",
+      "projectName": "C#",
+      "projectPath": "C:\\Users\\Hal\\Desktop\\bioinformatics\\Rosalind\\python_village\\C#\\variables_arithmetic\\C#.csproj",
       "packagesPath": "C:\\Users\\Hal\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Hal\\Desktop\\bioinformatics\\Rosalind\\python_village\\C#\\variables&arithmetic\\obj\\",
+      "outputPath": "C:\\Users\\Hal\\Desktop\\bioinformatics\\Rosalind\\python_village\\C#\\variables_arithmetic\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Hal\\AppData\\Roaming\\NuGet\\NuGet.Config"
